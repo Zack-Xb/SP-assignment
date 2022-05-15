@@ -1,0 +1,100 @@
+ls -la|grep pipe
+ls -la | grep pipe
+cat main.c | figlet
+ls    -la
+cat           main.c
+cat main.c |      figlet
+ls -la | grep pipe
+ls -la
+ls -la | grep pipe
+>
+ls -la | grep pipe
+ls -la
+ls
+cat main.c
+ls -la | grep main.c
+ls -la | grep pipe
+ls -la
+ls -la | grep pipe
+ls -la 
+ls -la | grep pipe
+ls -la|grep pipe
+ls -la|grep main.c
+ls -la | grep pipe
+ls -la | figlet
+cat main.c 
+cat main.c | grep pipe
+ls -la | less
+cat main.c | grep pipe
+ls -la | figlet
+ls -la | grep pipe
+ls -la | grep pipe | figlet
+ls -la | grep pipe
+cat main.c | grep pipe
+ls -la | figlet
+ver
+cat main.c | grep pipe
+ls -la | figlet
+ls
+ls -la
+cat main.c
+ls -la | figlet
+ls
+ls -la
+ls -la | wc -l
+ls -la | grep pipe
+ls -la | wc -l
+ls -la | grep pipe
+echo hello | figlet
+cat main.c | grep pipe | figlet
+echo hello | figlet
+cat main.c | grep pipe | figlet
+cat main.c | grep pipe
+cat main.c | grep pipe | figlet
+echo hello | figlet
+cat main.c | grep pipe | figlet
+echo hello | figlet
+cat main.c | grep pipe | figlet
+echo hello | figlet
+cat main.c | grep pipe | figlet
+echo hello | figlet
+cat main.c | grep pipe | figlet
+cat main.c | grep pipe 
+cat main.c | grep pipe | grep tokens
+cat main.c | grep pipe 
+cat main.c | grep pipe | grep tokens
+cat main.c | grep pipe | grep tokens | figlet
+echo hello | figlet
+cat main.c | grep pipe | grep tokens | figlet
+cat main.c | grep pipe | grep tokens
+cat main.c | grep pipe | grep tokens | figlet
+echo hello | figlet
+cat main.c | grep pipe | grep tokens | figlet
+echo hello | figlet
+cat main.c | grep pipe | grep tokens | figlet
+cat main.c | grep pipe | grep tokens 
+ls -la | wc -l | figlet
+echo hello | figlet
+cat main.c | grep pipe | grep tokens | figlet
+echo jamie il king
+echo jamie il king | figlet
+echo andra il queen | figlet
+fortune | cowsay
+fortune | cowsay | wc
+ls
+fortune | cowsay | wc
+echo jamie il king | figlet
+cat main.c | grep pipe | grep tokens | figlet
+cat main.c
+echo aiden
+echo aiden | figlet 
+fortune | cowsay
+echo hello | figlet
+echo carmen king | figlet
+cat main.c
+ls
+ls -la
+echo Jake Ihobb jaqbad il-Bajd | figlet
+fortune | cowsay
+sl
+telnet towel.blinkenlights.nl

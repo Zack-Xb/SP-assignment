@@ -1,0 +1,7 @@
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/T5.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/T1.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/T4.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/T2.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug/CMakeFiles/T3.dir

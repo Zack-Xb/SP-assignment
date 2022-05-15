@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SP_Assignment",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "T1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T1-Debug-64923556c4bf2906c140.json",
+					"name" : "T1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "T2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T2-Debug-b8671181f35f57a88393.json",
+					"name" : "T2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "T3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T3-Debug-abfe27788152e78a60e4.json",
+					"name" : "T3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "T4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T4-Debug-4a3f4cbe4a326900aa0b.json",
+					"name" : "T4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "T5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T5-Debug-f73f6f30cdf21a5ba329.json",
+					"name" : "T5",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wave_ceo/CLionProjects/SP_Assignment/cmake-build-debug",
+		"source" : "/home/wave_ceo/CLionProjects/SP_Assignment"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

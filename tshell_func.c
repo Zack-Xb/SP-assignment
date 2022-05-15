@@ -81,7 +81,7 @@ int tokc(const char *buff){
 //}
 
 
-void fork_exec_pipe (char ** args,int pipeN ) {
+void fork_exec_pipe (char ** args,int pipeN, int *fileIn, int *fileOut,bool async ) {
 
 
     int c_count=pipeN;
@@ -93,64 +93,61 @@ void fork_exec_pipe (char ** args,int pipeN ) {
 
 
 
-   for(int stage= 0; stage<c_count;stage++){
-       printf("%s\n",args[stage]);
-    }
+ //  for(int stage= 0; stage<c_count;stage++){
+   //    printf("%s\n",args[stage]);
+    //}
 
-   for(int stage= 0; stage<c_count;stage++){
-       previous_fd=current_fd-2;
-       int ct=0;
-       char *arg_buffer= malloc(strlen(args[stage])+1);
+   for(int stage= 0; stage<c_count;stage++) {
+       previous_fd = current_fd - 2;
+       int ct = 1;
+
+       char *arg_buffer = malloc(strlen(args[stage]) + 1);
        char *argv[MAXLIST];
-        strcpy(arg_buffer,args[stage]);
-     //  argv[0]=strsep(&arg_buffer," ");
-       //for(int token =1; (argv[token]=strtok(NULL," "))!=NULL;token++ && ct++);
 
-       for (int i = 0; i < MAXLIST; i++) {
-           argv[i] = strsep(&arg_buffer, " ");
+       strcpy(arg_buffer, args[stage]);
+       argv[0] = strtok(arg_buffer, " ");
+       for (int token = 1; (argv[token] = strtok(NULL, " ")) != NULL; token++) {
 
-           if (argv[i] == NULL)
-              break;
-           //if (strlen(argv[i]) == 0)
-             // i--;
            ct++;
        }
-     //  argv[ct+1]=NULL;
-       for(int j=0;j<ct;j++){
-           printf("%s\n",argv[j]);
-       }
+       //  argv[ct+1]=NULL;
+     //  for (int j = 0; j < ct; j++) {
+       //    printf("%s\n", argv[j]);
+       //}
 
-       if(stage<pipe_count)
+       if (stage < pipe_count)
            pipe(current_fd);
 
        pid_t pid = fork();
-       if(pid==-1){
+       if (pid == -1) {
            perror("Fork failed!");
-           exit( EXIT_FAILURE);
-       }else if (pid == 0){
-           if(stage <pipe_count) {
+           exit(EXIT_FAILURE);
+       } else if (pid == 0) {
+           if (stage < c_count - 1) {
                close(current_fd[0]);
                dup2(current_fd[1], STDOUT_FILENO);
                close(current_fd[1]);
            }
-            if(stage >0){
-                close(current_fd[1]);
-                dup2(current_fd[0],STDIN_FILENO);
-                close(current_fd[0]);
-            }
-           if(execvp(argv[0], argv) == -1){
+           if (stage > 0) {
+               close(previous_fd[1]);
+               dup2(previous_fd[0], STDIN_FILENO);
+               close(previous_fd[0]);
+           }
+           if (execvp(argv[0], argv) == -1) {
                perror("Exec failed!");
                exit(EXIT_FAILURE);
            }
-
-          exit( EXIT_SUCCESS);
+           exit(EXIT_SUCCESS);
        }
-     if(stage>=1){
-         close(previous_fd[0]);
-         close(previous_fd[1]);
-     }
-    current_fd+=2;
+       if (stage >= 1) {
+           close(previous_fd[0]);
+           close(previous_fd[1]);
+       }
+
+       current_fd += 2;
+       wait(NULL);
    }
+     wait(NULL);
 }
 
 void PipedTwo(char** parsed, char** parsedP)

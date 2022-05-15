@@ -12,23 +12,28 @@
 
 
 void pipeline_tokenizer(char *tbParsed,int c){
-    int pCount=0;
-       // printf("%s\n",tbParsed);
+    int pCount=1;
+        //printf("%s\n",tbParsed);
 
    char *piped[100];
-    for (int i = 0; i < c+1; i++) {
-        piped[i] = strsep(&tbParsed, " | ");
+    piped[0] = strtok(tbParsed, "|");
+    for(int token =1; (piped[token]=strtok(NULL,"|"))!=NULL;token++){
+    //for (int i = 0; i < c+1; i++) {
+      //  if(piped[i]==NULL){
+        //    i--;
+        //}
 
-        if(piped[i]==NULL){
-            i--;
-        }
         pCount++;
     }
-
-   for (int i=0;i<pCount;i++){
-        printf("%s\n",piped[i]);
-    }
-    fork_exec_pipe(piped,pCount);
+   // printf("%d\n",pCount);
+   //for (int i=0;i<pCount;i++){
+     //   printf("%s\n",piped[i]);
+    //}
+   int *FIn=NULL;
+   int *Fout=NULL;
+   bool block=false;
+    fork_exec_pipe(piped,pCount,FIn,Fout,block);
+    wait(NULL);
   free(tbParsed);
     //return *piped;
     //if (piped[1] == NULL) {

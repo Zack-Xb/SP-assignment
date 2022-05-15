@@ -53,7 +53,7 @@ int main() {
             //else
               //  fork_exec_pipe(tokens);
             tokenizer(line,parsedArgs,token_count);
-            wait(NULL);
+             wait(NULL);
            // execFlag= processString(line,parsedArgs,parsedArgsPiped,parsedArgsRedirected,token_count);
 
             //if(execFlag==1)
